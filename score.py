@@ -53,5 +53,3 @@ def scoreFunction(rainAmount, caf):
             print("\nError, you are not passing in integers\n")
     except:
         print("\nSomething went wrong!\n")
-
-
