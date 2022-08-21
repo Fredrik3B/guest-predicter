@@ -53,18 +53,19 @@ def main():
     if use_cached_data:
         exp = datetime.strptime(use_cached_data[0], DATE_FORMAT)
         if not exp.timetuple() < gmtime():
-            get_weather_data(open_cache_json())
-            return
+            return get_weather_data(open_cache_json())
+            
         headers["If-Modified-Since"] = use_cached_data[1]
-        
+
     response = requests.get(url, headers=headers)
     validation = validate_resp(response)
     if isinstance(validation, dict):
         return validation
 
-    get_weather_data(validation)
+    return get_weather_data(validation)
     
     
 
 if __name__ == "__main__":
-    main()
+    data = main()
+    print(data)
