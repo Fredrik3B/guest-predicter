@@ -1,6 +1,5 @@
 from score import *
 from config import config
-import json
 
 # import weather
 weather = {
