@@ -32,7 +32,6 @@ def validate_resp(resp):
                 error_message = "Throttling problemer. Fiks kreves for å ungå ban fra api"
             else:
                 error_message = "Feil oppsto, bør sjekkes ut"
-        
             return {"staus": "fail", "error_code": resp.status_code, "message": error_message}
         
         write_db(resp.headers.get("Expires"), resp.headers.get("Last-Modified"))

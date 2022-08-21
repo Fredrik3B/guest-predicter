@@ -42,7 +42,7 @@ def scoreFunction(rainAmount, caf):
     cafScore = caf*0.5
     try:
         x = isinstance(rainAmount, (float, int))
-        y = isinstance(caf, int)
+        y = isinstance(caf, float, int)
         if x == True and y == True:
             score = rainFunction(rainScore) * cloudFunction(cafScore)
             if score > 100 or score < 1:
