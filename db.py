@@ -14,7 +14,6 @@ def read_db():
 def write_db(exp, mod):
     with open("vars", "r") as file:
         lines = file.readlines()
-        print(lines)
         lines[3], lines[5] = f"{exp}\n", f"{mod}\n"
 
     with open("vars", "w") as file:
