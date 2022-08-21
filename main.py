@@ -4,14 +4,14 @@ weather = {
     # Hele timer
     11: {
         [
-        {"rainAmount": 0.1},
-        {"caf": 30}
+        {"precipitation_amount": 0.1},
+        {"cloud_area_fraction": 30}
         ]
     },
     12: {
         [
-        {"rainAmount": 0.3},
-        {"caf": 50}
+        {"precipitation_amount": 0.3},
+        {"cloud_area_fraction": 50}
         ]
     }
 }
