@@ -1,27 +1,36 @@
 from score import *
-import requests
+from config import config
 import json
 
 # import weather
 weather = {
-    "2022-08-21T20:38:56Z": {
-        "cloud_area_fraction": 0.0,
-        "precipitation_amount": 0.0
+    11: {
+        "cloud_area_fraction": 0.5,
+        "precipitation_amount": 70
+    },
+    12: {
+        "cloud_area_fraction": 0.1,
+        "precipitation_amount": 20
+    },
+    13: {
+        "cloud_area_fraction": 0,
+        "precipitation_amount": 0
+    },
+    14: {
+        "cloud_area_fraction": 0,
+        "precipitation_amount": 0
+    },
+    15: {
+        "cloud_area_fraction": 0,
+        "precipitation_amount": 0
     }
 }
-    
-HOUR_RANKING_KIKUT = {11: 5, 12: 25, 13: 35, 14: 25, 15: 10}
 
 def main(hourRanking):
-    hourValue = []
-    for i in hourRanking:
-        hourValue.append(hourRanking[i]/100)
     values = []
-    for value in hourValue:
-        for condition in weather:
-            values.append(scoreFunction(weather, 40) * value)
-    print(values)
+    for i in weather:
+        values.append(scoreFunction(weather[i]["cloud_area_fraction"], weather[i]["precipitation_amount"]) * hourRanking[i])
     x = sum(values)
     print(x)
 
-main(HOUR_RANKING_KIKUT)
+main(config["lokasjon"]["kikut"]["time_ranking"])
