@@ -4,27 +4,9 @@ import json
 
 # import weather
 weather = {
-    "date": {
-        "2022-08-21": {
-            11: {
-                {"precipitation_amount": 0.1},
-                {"cloud_area_fraction": 30}      
-            },
-            12: {
-                {"precipitation_amount": 0.1},
-                {"cloud_area_fraction": 30}      
-            },
-        },
-        "2022-08-22": {
-            11: {
-                {"precipitation_amount": 0.1},
-                {"cloud_area_fraction": 30}      
-            },
-            12: {
-                {"precipitation_amount": 0.1},
-                {"cloud_area_fraction": 30}      
-            },
-        }
+    "2022-08-21T20:38:56Z": {
+        "cloud_area_fraction": 0.0,
+        "precipitation_amount": 0.0
     }
 }
     
