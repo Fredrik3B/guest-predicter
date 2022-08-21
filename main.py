@@ -2,17 +2,20 @@ from score import *
 # import weather
 weather = {
     # Hele timer
-    11: {
-        [
-        {"precipitation_amount": 0.1},
-        {"cloud_area_fraction": 30}
-        ]
-    },
-    12: {
-        [
-        {"precipitation_amount": 0.3},
-        {"cloud_area_fraction": 50}
-        ]
+    "2022-08-21": {
+        11: {
+            [
+            {"precipitation_amount": 0.1},
+            {"cloud_area_fraction": 30}
+            ]
+        },
+        12: {
+            [
+            {"precipitation_amount": 0.3},
+            {"cloud_area_fraction": 50}
+            ]
+        },
+        # ...
     }
 }
 
