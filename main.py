@@ -1,4 +1,7 @@
 from score import *
+import requests
+import json
+
 # import weather
 weather = {
     "date": {
