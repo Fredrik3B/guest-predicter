@@ -1,11 +1,14 @@
 from main import *
+from datetime import datetime
 
-uke = {
-    "onsdag": 0.2,
-    "torsdag": 0.2,
-    "fredag": 0.4,
-    "lørdag": 0.95,
-    "søndag": 1,
+uke = { # [mandag: 0, tirsdag: 1...]
+    0: 0.2,
+    1: 0.2,
+    2: 0.2,
+    3: 0.2,
+    4: 0.4,
+    5: 0.95,
+    6: 1,
 }
 
 def antall(score):
@@ -15,6 +18,8 @@ def antall(score):
 
 def dag(dag):
     antallMennesker = antall(main(config["lokasjon"]["kikut"]["time_ranking"]))*dag
+    antallMennesker = round(antallMennesker)
+    print("\nForventet antall mennesker er:")
     return antallMennesker
 
-print(dag(uke["søndag"]))
+print(dag(uke[datetime.today().weekday()]))
